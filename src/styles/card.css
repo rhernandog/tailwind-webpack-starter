@@ -1,0 +1,60 @@
+.card {
+  @apply bg-white p-4 rounded shadow-card w-4/5 text-gray-800;
+
+  @screen md {
+    @apply w-3/5;
+  }
+  @screen lg {
+    @apply w-3/6;
+  }
+
+  /* FORM GROUP */
+  .form-group {
+    @apply mb-2 w-full;
+
+    label {
+      @apply inline-block mb-2 cursor-pointer;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      @apply w-full p-2 border-b-2 border-gray-600 bg-gray-100 transition duration-150 ease-in;
+
+      &:hover {
+        @apply border-gray-800 bg-gray-200;
+      }
+      &:focus {
+        @apply border-teal-500 bg-gray-100 outline-none;
+      }
+    }
+  }
+
+  /* BUTTON CONTAINER */
+  .login-btn-container {
+    @apply w-full flex justify-around mt-6;
+
+    input[type="submit"], 
+    input[type="reset"] {
+      @apply cursor-pointer px-8 py-3 rounded text-white outline-none transition duration-150 ease-in;
+    }
+    
+    input[type="submit"] {
+      @apply bg-teal-600;
+      &:hover {
+        @apply bg-teal-800;
+      }
+      &:focus {
+        @apply bg-teal-700 shadow-submit;
+      }
+    }
+    input[type="reset"] {
+      @apply bg-red-700;
+      &:hover {
+        @apply bg-red-900;
+      }
+      &:focus {
+        @apply bg-red-800 shadow-cancel;
+      }
+    }
+  }
+}
